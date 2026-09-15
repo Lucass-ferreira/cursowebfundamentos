@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circunferência do Raio</title>
+</head>
+<body>
+    <h1>Circunferência do Raio</h1>
+
+    <label>Digite o Raio: <input type="number" id="raio"></label>
+    <button onclick="calcularRaioPrompt()">Calcular Raio Prompt</button>
+    <button onclick="calcularRaioInput()">Calcular Raio Input</button>
+
+    <output id="output"></output>
+
+    <script>
+        const raio = document.getElementById("raio")
+        const output = document.getElementById("output")
+        
+
+        function calcularRaioInput() {
+            let raioValue = parseFloat(raio.value)
+            mostraAreaRaio(raioValue)
+        }
+
+        function calcularRaioPrompt() {
+            let raioValue = parseFloat(prompt("digite o raio" ))
+            mostraAreaRaio(raioValue)
+        }
+
+        function mostraAreaRaio(raio) {
+            let outputHtml = ""
+            let valorPI = Math.PI.toFixed(2)
+
+            let area = (valorPI * (raioPrompt**2)).toFixed(2)
+
+            outputHtml = `<br><br>A circunferência de raio ${raioPrompt} é ${area}`
+
+            output.innerHTML = outputHtml
+        }
+    </script>
+</body>
+</html>

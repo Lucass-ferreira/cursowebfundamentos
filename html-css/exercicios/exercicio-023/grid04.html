@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .gridContainer {
+            display: grid;
+            background-color: #ccc;
+            width: 90%;
+            gap: 10px;
+
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            /* grid-auto-rows: 100px; */
+            grid-auto-rows: minmax(100px, auto);
+        }
+
+        .gridItem {
+            background-color: orange;
+            padding: 15px;
+            font-family: sans-serif;
+        }
+
+        /* GRID */
+
+        .gridContainer {
+            display: grid;   
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="gridContainer">
+        <div class="gridItem">1</div>
+        <div class="gridItem">2</div>
+        <div class="gridItem">3</div>
+        <div class="gridItem">4</div>
+        <div class="gridItem">4</div>
+        <div class="gridItem">4</div>
+        <!-- <div class="gridItem">4</div>
+        <div class="gridItem">kdksf fjfsh  fjhskdfhs fhskhs  jfshf fshs fshjfshs  k </div>
+        <div class="gridItem">4</div>
+        <div class="gridItem">4</div>
+        <div class="gridItem">4</div>
+    </div> -->
+
+</body>
+
+</html>

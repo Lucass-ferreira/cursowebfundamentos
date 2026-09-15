@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>função</title>
+</head>
+<body>
+    <h1>Função</h1>
+
+    <input type="number" id="number">
+    <button onclick="mostrarTabuada()" >Mostra Tabuada</button>
+    <button onclick="limparTabuada()" >Limpar Tabuada</button>
+
+    <div id="output"></div>
+
+    <script>
+        let numero = document.getElementById("number")
+        let output = document.getElementById("output")
+
+        function mostrarTabuada() {
+            output.innerHTML = ""
+            let num = numero.value
+
+            if (!isNaN(num)) {
+                let cont = 0
+                while(cont <= 10) {
+                    output.innerHTML += (num + " x " + cont + " = " + (num * cont) + "<br>")
+                    cont++
+                }
+                
+                output.innerHTML += ("Saiu do Jogo")
+            } else {
+                alert("digite apenas numeros")
+            }
+        }
+
+        function limparTabuada() {
+            output.innerHTML = ""
+        }
+
+    </script>
+</body>
+</html>

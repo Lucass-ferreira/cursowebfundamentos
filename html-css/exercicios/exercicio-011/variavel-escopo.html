@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>escopo de variáveis</title>
+    <style>
+        :root {
+            --color: red;
+        }
+
+        html {
+            font-size: 200%;
+        }
+
+        .container {
+            --color: orange;
+        }
+
+        p {
+           color: var(--color);
+        }
+
+        .div1 {
+            --color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div1">
+            <p>Lorem, ipsum dolor.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="div2">
+            <p>Lorem, ipsum dolor.</p>
+        </div>
+    </div>
+
+    <p>teste</p>
+
+</body>
+</html>

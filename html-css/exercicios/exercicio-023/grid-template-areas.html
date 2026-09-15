@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .gridContainer {
+            background-color: #ccc;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .gridItem {
+            background-color: orange;
+            padding: 15px;
+            font-family: sans-serif;
+        }
+
+        .gridContainer {
+            display: grid;
+            /* grid-template-columns: repeat(3, 1fr); */
+            /* grid-template-rows: 75px 50px 1fr 50px; */
+            gap: 1em;
+
+            /* grid-template-areas: 
+            "header header header"
+            "nav nav ."
+            "main main aside"
+            "footer footer aside"; */
+
+            grid-template: 
+                "header header header" 75px
+                "nav nav ." 50px
+                "main main aside" 1fr
+                "footer footer aside" 50px
+                / 1fr 1fr 1fr;
+                
+        }
+
+        .header {
+            /* grid-column: 1 / -1; */
+
+            /* GRID TAMPLATE AREA */
+            /* grid-area: header; */
+
+            /* GRID AREA / USANDO GRID LINES COM NOMES INPLICITOS */
+            /* grid-column: header-start / header-end; */
+
+            /* GRID AREA / USANDO GRID LINES COM NOMES INPLICITOS MAIS "ENCHUTO" */
+            grid-column: header;
+
+        }
+
+        .nav {
+            /* grid-column: 1 / -2; */
+            /* grid-area: nav; */
+
+            /* GRID AREA / USANDO GRID LINES COM NOMES INPLICITOS */
+            /* grid-column: nav-start / nav-end; */
+
+            /* GRID AREA / USANDO GRID LINES COM NOMES INPLICITOS MAIS "ENCHUTO" */
+            grid-column: nav;
+        }
+
+        .aside {
+            /* grid-row: 2 / -1;
+            grid-column: 3 / 4;
+            z-index: 1; */
+            /* grid-area: aside; */
+
+            /* GRID AREA / USANDO GRID LINES COM NOMES INPLICITOS */
+            /* grid-column: aside-start / aside-end; */
+            /* grid-row: aside-start / aside-end; */
+
+            /* GRID AREA / USANDO GRID LINES COM NOMES INPLICITOS MAIS "ENCHUTO" */
+            grid-column: aside;
+            grid-row: aside;
+        }
+
+        .main {
+            /* grid-column: 1 / -2; */
+            /* grid-area: main; */
+
+            /* GRID AREA / USANDO GRID LINES COM NOMES INPLICITOS */
+            /* grid-column: main-start / main-end; */
+
+            /* GRID AREA / USANDO GRID LINES COM NOMES INPLICITOS MAIS "ENCHUTO" */
+            grid-column: main;
+
+        }
+
+        .footer {
+            /* grid-column: 1 / -1;
+            grid-row: 4 / 5;
+            background-color: rgba(0, 0, 0, .5); */
+            /* grid-area: footer; */
+
+            /* GRID AREA / USANDO GRID LINES COM NOMES INPLICITOS */
+            /* grid-column: footer-start / footer-end; */
+
+            /* GRID AREA / USANDO GRID LINES COM NOMES INPLICITOS MAIS "ENCHUTO" */
+            grid-column: footer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="gridContainer">
+        <header class="header gridItem">header</header>
+        <nav class="nav gridItem">nav</nav>
+        <aside class="aside gridItem">aside</aside>
+        <main class="main gridItem">main</main>
+        <footer class="footer gridItem">footer</footer>
+    </div>
+
+</body>
+
+</html>

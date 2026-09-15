@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-shadow</title>
+    <style>
+
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            background-color: orange;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+
+            /* eixo orizontal / eixo vertical */
+            border-radius: 50px 20px 0 80px / 100px 50px 0 20px;
+
+            /* deslocamento horizontal, deslocamento vertical, esfumaçamento, tamanho da sombra */
+            box-shadow: 20px 0 0 0 black, 10px 20px 10px 0 red, -20px 0 5px 0 blue, 0 -20px 10px 0 green; 
+        }
+    </style>
+</head>
+<body>
+    <h1>box-shadow</h1>
+
+    <div></div>
+</body>
+</html>

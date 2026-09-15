@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores-atributos</title>
+    <style>
+        a[href="#"]:not(.link-ok) {
+            opacity: .2;
+        }
+
+        a[href^="htpp"] {
+            color: red;
+        }
+
+        a[href$=".pdf"] {
+            color: green;
+        }
+
+        a[target="_blank"] {
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="htpps://serfrontend.com" target="_blank">link externo</a></li>
+        <li><a href="pasta/arquivo.pdf">link para um pdf</a></li>
+        <li><a href="seletores.html">link interno</a></li>
+    </ul>
+    
+</body>
+</html>

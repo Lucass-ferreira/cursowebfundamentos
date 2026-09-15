@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br[]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano bissexto</title>
+</head>
+<body>
+    <h1>Ano bissexto</h1>
+
+    <script>
+        for(let cont = 1004; cont <= 2024; cont += 4) {
+            if(cont % 100 != 0 || cont % 400 === 0){
+                document.write(cont + "<br>")
+            }
+        }
+
+        //revisão
+        // for (let ano = 1004; ano <= 2024; ano += 4) {
+
+        //     let anoBissexto = ano % 100 != 0 || ano % 400 === 0
+
+        //     if (anoBissexto) {
+        //         document.write(ano + " é ano bissexto")
+        //     } else {
+        //         document.write(ano + " não é ano bissexto")
+        //     }
+        // }
+    </script>
+</body>
+</html>

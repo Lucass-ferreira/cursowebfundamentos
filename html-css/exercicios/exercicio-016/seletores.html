@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores</title>
+    <style>
+        article {
+            outline: 4px solid green;
+        }
+        article a {
+            color: red;
+        }
+
+        article a > b {
+            color: yellowgreen;
+        }
+
+        h3 + p {
+            background-color: yellow;
+        }
+
+        h3 ~ p {
+            background-color: aqua;
+        }
+
+        p:not(.destque) {
+            background-color: orange;
+        }
+
+        [href^="https"] {
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <p>paragrafo <a href="https"> Link falso em <b>negrito</b> </a></p>
+
+    <article>
+        <p>paragrafo antes do titulo com <b>negrito</b> </p>
+
+        <h3>titulo</h3>
+
+        <p>paragrafo <a href="#"> Link falso em <b>negrito</b> </a></p>
+        <p class="destaque">paragrafo <a href="#"> Link falso em <b>negrito</b> </a></p>
+        <p>paragrafo <a href="#"> Link falso em <b>negrito</b> </a></p>
+
+    </article>
+
+     <p>paragrafo <a href="https"> Link falso em <b>negrito</b> </a></p>
+</body>
+</html>

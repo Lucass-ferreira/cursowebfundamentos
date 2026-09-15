@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+
+    <style>
+       div {
+            outline: 1px solid #888;
+            width: 80%;
+            height: 200px;
+            margin: .5em auto;
+       }
+
+       p {
+            width: 80%;
+       }
+
+       .destaque {
+            background-color: yellow;
+       }
+
+       .div1 .destaque {
+            transform: translate(50%);
+       }
+
+       .div2 .destaque {
+            position: relative;
+            left: 50%;
+            top: 50%;
+       }
+
+       .div3 .destaque {
+            transform: rotate(30deg);
+       }
+
+       .div4 .destaque {
+            transform: scale(.5, 2);
+       }
+
+       .div5 .destaque {
+            transform: skew(45deg);
+       }
+
+       .div6 .destaque {
+            transform: translate(200px) rotate(45deg);
+            transform-origin: 0 100%;
+       }
+
+       .div7 .destaque {
+            transform: rotate(45deg) translate(100px);
+            transform-origin: 0 100%;
+       }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="div1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+    </div>
+
+    <div class="div2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+    </div>
+
+    <div class="div3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+    </div>
+
+    <div class="div4">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+    </div>
+
+    <div class="div5">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+    </div>
+
+    <div class="div6">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+    </div>
+
+    <div class="div7">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate.</p>
+    </div>
+
+</body>
+</html>

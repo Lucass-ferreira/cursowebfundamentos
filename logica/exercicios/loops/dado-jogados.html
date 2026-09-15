@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dados</title>
+</head>
+<body>
+    <h1>dados jogados</h1>
+
+    <script>
+        let par = 0
+        let cont = 0
+        do{
+            let dado1 = parseInt(Math.random() * 6 + 1)
+            let dado2 = parseInt(Math.random() * 6 + 1)
+
+            if((dado1 + dado2) % 2 == 0 || dado1 != dado2) {
+                document.write("esse é o primeiro dado: " + dado1 + " e esse é o segundo dado: " + dado2 + "<br><hr>")
+                par++
+            } 
+            cont++
+        } while(par < 10)
+        
+        document.write("<br>" + "Quantidade de numeros pares obtidos: " + par + "<br>")
+        document.write("O dado foi jogado: " + cont + " vezes" + "<br><br>")
+        document.write("Fim do programa")
+
+    </script>
+</body>
+</html>

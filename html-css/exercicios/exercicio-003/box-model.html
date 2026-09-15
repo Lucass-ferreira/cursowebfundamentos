@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-model</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1{
+            color: white;
+            background-color: rgba(0, 100, 0, 0.845);
+            /*padding-top, padding-right, padding-bottom, padding-left*/
+            padding: 15px 0 5px 40px;
+            
+        }
+
+        h2{
+            color: white;
+            background-color: rgba(139, 0, 0, 0.853);
+            /*margin-top, margin-right, margin-bottom, margin-left*/
+            margin: 56px 0 0 0;
+        }
+
+        p {
+            background-color: lightgray;
+            
+        }
+
+        .destaque {
+            background-color: orange;
+        }
+
+        .size {
+            width: 50%;
+            height: 100px;
+        }
+
+        .padding {
+            padding: 26px;
+        }
+
+        .margin {
+            margin: 50px 0 20px 100px;
+        }
+
+        .border {
+            width: 500px;
+            padding: 10px;
+            /*border: width/expessura, tipo de borda e cor;*/
+            border-top: 15px solid blue;
+            border-bottom: 17px dashed red;
+            border-right: 14px double green;
+            border-left: 12px groove pink;
+        }
+
+        .outline {
+            outline: 10px solid red;
+            border: 10px solid blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box-model</h1>
+
+    <h2>width e height</h2>
+
+    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolore tempora rerum ex doloribus consequuntur ipsa repellat maiores magnam autem quos ipsam vero.</p>
+    <p class="destaque size" >Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <h2>Padding</h2>
+
+    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolore tempora rerum ex doloribus consequuntur ipsa repellat maiores magnam autem quos ipsam vero.</p>
+    <p class="destaque padding" >Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <h2>Margin</h2>
+
+    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolore tempora rerum ex doloribus consequuntur ipsa repellat maiores magnam autem quos ipsam vero.</p>
+    <p class="destaque margin" >Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <h2>border</h2>
+
+    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolore tempora rerum ex doloribus consequuntur ipsa repellat maiores magnam autem quos ipsam vero.</p>
+    <p class="destaque border" >Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <h2>Outline</h2>
+
+    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolore tempora rerum ex doloribus consequuntur ipsa repellat maiores magnam autem quos ipsam vero.</p>
+    <p class="destaque outline" >Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>arrays</h1>
+
+    <script>
+        let numeros = [9, 10, 5, 4, 0, 1, 30, 41, 100, 7]
+        let numeros2 = []
+
+        for(let ind = 0; ind < numeros.length; ind++) {
+            let numero = numeros[ind] * 2
+
+            //numeros2[numeros2.length] = numero
+            numeros2.push(numero, " - ", true) // metodo push() "empurra" um novo valor no final do array
+        }
+        console.log(numeros2)
+        </script>
+</body>
+</html>

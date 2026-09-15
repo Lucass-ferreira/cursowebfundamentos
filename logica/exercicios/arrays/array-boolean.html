@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean</title>
+</head>
+<body>
+    <h1>array</h1>
+
+    <script>
+        const valores = [null, null, 3, "9", undefined, "qualquer texto", NaN, parseFloat("kjakwak")]
+        let encontrou = false
+        // let valorNull = 0
+        // let valorUndefined = 0
+        // let valorNaN = 0
+
+        for(let ind = 0; ind < valores.length; ind++){
+            let num = valores[ind]
+
+            if(num === null || num === undefined || isNaN(num) ) {
+                encontrou = true
+                break
+            }
+            // if(isNaN(valores[ind]) && typeof valores[ind] === 'number'){
+            //     valorNaN++
+            // } else if (valores[ind] === null){
+            //     valorNull++
+            // } else if (valores[ind] === undefined) {
+            //     valorUndefined++
+            // }
+        }
+        
+        alert("Encontrou null, undefined ou NaN? " + encontrou)
+        // alert("valores null foi encontrado " + valorNull + " vezes")
+        // alert("valores undefined foi encontrado " + valorUndefined + " vezes")
+        // alert("valores NaN foi encontrado " + valorNaN + " vezes")
+    </script>
+</body>
+</html>

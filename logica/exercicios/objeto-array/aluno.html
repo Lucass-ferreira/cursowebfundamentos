@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluno</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table{
+            border-collapse: collapse;
+        }
+
+        tr,
+        th,
+        td {
+            border: 1px solid;
+            padding: .5em 1em;
+        }
+
+        td + td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Nota 3</th>
+                <th>Nota 4</th>
+                <th>Media</th>
+                <th>Aprovado/Reprovado</th>
+            </tr>
+
+            <tbody>
+                    <tr id="linhaAluno">
+
+                    </tr>
+            </tbody>
+        </thead>
+    </table>
+
+    <script>
+        const aluno = {
+            nome: "João",
+            notas: [8, 7, 8, 6]
+        }
+
+        let media = 0
+        let linhaAluno = document.getElementById("linhaAluno")
+
+        linhaAluno.innerHTML = `<td>${aluno.nome}</td>`
+        
+        for(let ind = 0; ind < aluno.notas.length; ind++){
+            linhaAluno.innerHTML += `<td>${aluno.notas[ind].toFixed(2)}</td>`
+
+            media += aluno.notas[ind] / 4
+        }
+        
+        linhaAluno.innerHTML += `<td>${media}</td>`
+
+        linhaAluno.innerHTML += (media >= 7) ? "<td>Aprovado</td>" : "<td>Reprovado</td>"
+
+        // if(media >= 7){
+        //     linhaAluno.innerHTML += `<td>Aprovado</td>`
+        // } else {
+        //     linhaAluno.innerHTML += `<td>Reprovado</td>`
+        // }
+
+    </script>
+</body>
+</html>

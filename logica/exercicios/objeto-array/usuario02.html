@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Pessoas</h1>
+
+    <ul id="pessoas"></ul>
+
+    <script>
+        const usuarios = [ 
+            {nome: "Lucas", email: "eumesmo@gmail"}, 
+            {nome: "Juliana", email: "julymesmo@gmail"}, 
+            {nome: "Alisu", email: "alisumesmo@gmail"}, 
+            {nome: "Carolina", email: "carolmesmo@gmail"},
+            {nome: "Marcos", email: "marcosmesmo@gmail"}
+        ]
+        
+        let pessoaLista = document.getElementById("pessoas")
+
+        for(let ind = 0; ind < usuarios.length; ind++) {
+            pessoaLista.innerHTML += (`<li>${usuarios[ind].nome}: ${usuarios[ind].email}`)
+            //pessoaLista.innerHTML += ("<li>" + usuarios[ind].nome + "</li>")
+        }
+    </script>
+</body>
+</html>

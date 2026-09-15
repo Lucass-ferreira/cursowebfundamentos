@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booelan par</title>
+</head>
+<body>
+    <script>
+        function booleanPar(numero){
+           return numero % 2 === 0
+        }
+
+        console.log(booleanPar(8))
+        console.log(booleanPar(9))
+
+        console.log("-----------------------------------")
+
+        function ehBissexto(ano){
+
+            return ano % 4 === 0 && (ano % 100 != 0 || ano % 400 === 0)
+        }
+
+        console.log(ehBissexto(2002))
+        console.log(ehBissexto(2000))
+    </script>
+</body>
+</html>

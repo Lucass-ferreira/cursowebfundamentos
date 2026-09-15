@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elemento</title>
+    <style>
+        p a {
+            color: red;
+            background-color: yellow;
+        }
+
+        p:has(a) {
+            background-color: #ccc;
+            letter-spacing: 2px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border-bottom: 1px solid #ddd;
+            padding: .5em;
+            margin-bottom: 2em;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        tr:hover {
+            background-color:#e9e9e9;
+        }
+
+        tr:has(td:first-child input[type="checkbox"]:checked) {
+            background-color: #aaffaa;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Nome</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Lucas</td>
+                <td>lucas@gmail.com</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Ana Carolina</td>
+                <td>anacarolina@gmail.com</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Marcos</td>
+                <td>marcosrene@gmail.com</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Juliana</td>
+                <td>Juliana@gmail.com</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allison</td>
+                <td>allison@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, officia odit. Error molestias cum consequuntur, laudantium, eaque itaque enim dolorum quidem corrupti alias soluta, debitis pariatur! Iure aliquam optio pariatur.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, officia odit. Error molestias cum consequuntur, laudantium, eaque itaque enim dolorum quidem corrupti alias soluta, debitis pariatur! <a href="#">clique aqui</a> Iure aliquam optio pariatur.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, officia odit. Error molestias cum consequuntur, laudantium, eaque itaque enim dolorum quidem corrupti alias soluta, debitis pariatur! Iure aliquam optio pariatur.</p>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+    }
+
+    a {
+        display: inline-block;
+        padding: 5px;
+    }
+
+    a:link {
+        color: green;
+    }
+
+    a:visited {
+        color: orange;
+    }
+
+    a:hover {
+        text-decoration: none;
+        background-color: red;
+        color: white;
+    }
+
+    a:active {
+        background-color: blue;
+        color: white;
+        text-decoration: overline;
+    }
+</style>
+<body>
+    <h1>Pseudo-classes</h1>
+
+    <h2>Link</h2>
+    
+    <a href="#">Display</a> | <a href="#">Box Model</a> | <a href="#">Pagina inexistente</a>
+    
+    <p>Veja mais exemplos de box-sizing <a href="../ex004/box-sizing.html">box-sizing</a></p>
+</html>

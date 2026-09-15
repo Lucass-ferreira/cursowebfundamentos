@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangulo</title>
+</head>
+<body>
+    <h1>Função area do triangulo</h1>
+
+    <p>
+        <label for="base">Digite a base do triangulo: 
+            <input type="number" id="base">
+        </label>
+    </p>
+    <p>
+        <label for="altura">Digite a altura do triangulo: 
+            <input type="number" id="altura">
+        </label>
+    </p>
+    <p>
+        <button onclick="areaTriangulo()">Calcular Area</button>
+        <button onclick="limparTela()">Limpar</button>
+    </p>
+
+    <div id="output"></div>
+
+    <script>
+        const base = document.getElementById("base")
+        const altura = document.getElementById("altura")
+        const output = document.getElementById("output")
+
+        let outputHtml = ""
+
+        
+
+        function areaTriangulo() {
+            let baseTri = parseFloat(base.value)
+            let alturaTri = parseFloat(altura.value)
+
+            limparTela()
+
+            outputHtml = `(${baseTri} X ${alturaTri}) = ${(baseTri * alturaTri)}<br> (${(baseTri * alturaTri)} / 2) = ${(baseTri * alturaTri) / 2}<br>`
+            outputHtml += `A area do triangulo é: ${(baseTri * alturaTri) / 2}`
+
+            output.innerHTML = outputHtml
+        }
+
+        function limparTela() {
+            outputHtml = ""
+            output.innerHTML = ""
+        }
+    </script>
+</body>
+</html>

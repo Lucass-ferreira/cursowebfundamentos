@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semanas</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+
+    <script>
+        const semanas = ["domingo", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sabado"]
+
+        let dia = new Date().getDay()
+
+        switch (dia) {
+            case 0:
+                alert(semanas[0])
+                break;
+            case 1:
+                alert(semanas[1])
+                break;
+            case 2:
+                alert(semanas[2])
+                break;
+            case 3:
+                alert(semanas[3])
+                break;
+            case 4:
+                alert(semanas[4])
+                break;
+            case 5:
+                alert(semanas[5])
+                break;
+            default:
+                alert(semanas[6])
+                break;
+        }
+    </script>
+</body>
+</html>

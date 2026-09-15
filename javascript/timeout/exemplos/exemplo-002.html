@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div></div>
+
+    <script>
+        const tempoInicio = Date.now()
+        let num = 0
+
+        let strin = " "
+        var doc = document.querySelector("div")
+        setTimeout(function(){
+            for(let i = 0; i < 1000; i++){
+            strin += ` i: ${i} --`
+            doc.textContent += strin
+        }
+        }, 3000)
+        
+
+        // criar uma função pra ser executada de tempos em tempos
+        const intervalo = setInterval(function(){
+            console.log("interval n: ", num++)
+            if(num > 15){
+                clearInterval(intervalo)
+                const tempoFinal = Date.now()
+                console.log(tempoFinal - tempoInicio)
+            }
+        }, 1000)
+
+    </script>
+</body>
+</html>

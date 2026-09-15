@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar</title>
+</head>
+<body>
+    <h1>Somar</h1>
+
+    <label>Digite o primeiro numero: <input type="number" id="num1"></label><br><br>
+
+    <label>Simbolo: <input type="text" placeholder="+ - x /" id="operacao"></label><br><br>
+
+    <label>Digite o segundo numero: <input type="number" id="num2"></label>
+
+    <button onclick="result()">Calcular</button><br><br>
+
+    <output id="res"></output>
+
+    <script>
+        let num1 = document.getElementById("num1")
+        let num2 = document.getElementById("num2")
+        let operacao = document.getElementById("operacao")
+        let output = document.getElementById("res")
+        let soma = 0
+
+        function result() {
+            let numero1 = parseFloat(num1.value)
+            let numero2 = parseFloat(num2.value)
+            let simbolo = operacao.value
+
+            let res = somar (numero1, numero2, simbolo)
+
+            if(!(res === null)){
+                output.innerHTML = `A soma de ${numero1} ${simbolo} ${numero2} é ${res}`
+            } else {
+                alert("ERRo, digite um simbolo valido!")
+            }
+
+            // output.innerHTML = `A soma de ${numero1} ${simbolo} ${numero2} é ${res}`
+        }
+
+        function somar(n1, n2, simbolos){
+                    switch (simbolos) {
+                        case "+":
+                            return n1 + n2
+                        case "-":
+                            return n1 - n2
+                        case "*":
+                            return n1 * n2
+                        case "/":
+                            return n1 / n2
+                        default:
+                            return null
+                    }
+                }
+    </script>
+</body>
+</html>

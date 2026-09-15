@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div></div>
+
+    <script>
+        const tempoInicio = Date.now()
+        let num = 0
+
+        // agenda uma funçao para ser executada em determnado tempo
+        setTimeout(function(){
+            console.log("timeout depois de 2000ms")
+            const tempoFim = Date.now()
+            console.log(tempoFim - tempoInicio)
+        }, 2000)
+
+        let strin = " "
+        var doc = document.querySelector("div")
+        for(let i = 0; i < 1000; i++){
+            strin += ` i: ${i} --`
+            doc.textContent += strin
+        }
+
+        // criar uma função pra ser executada de tempos em tempos
+        const intervalo = setInterval(function(){
+            console.log("interval n: ", num++)
+            if(num > 15){
+                clearInterval(intervalo)
+            }
+        }, 1000)
+
+    </script>
+</body>
+</html>

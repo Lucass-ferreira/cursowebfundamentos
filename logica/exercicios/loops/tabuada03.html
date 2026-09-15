@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabuada</title>
+</head>
+<body>
+    <h1>tabuada</h1>
+
+    <script>
+
+        let num1 = parseInt(prompt("digite um numero:"))
+
+        for(let cont = 1; cont <= 1000; cont++) {
+            document.write( num1 + " X " + cont + " = " + (num1 * cont) + "<br>" )
+
+            if((cont % 10) == 0) {
+                document.write("<hr>")
+            }
+        }
+
+    </script>
+</body>
+</html>

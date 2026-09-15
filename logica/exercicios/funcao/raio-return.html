@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circunferência do Raio</title>
+</head>
+<body>
+    <h1>Circunferência do Raio</h1>
+
+    <label>Digite o Raio: <input type="number" id="raio"></label>
+    <button onclick="calcularRaioPromptAlert()">Calcular Raio Prompt e mostrar no alert</button>
+    <button onclick="calcularRaioInputAlert()">Calcular Raio Input e mostrar no alert</button>
+    <br>
+    <button onclick="calcularRaioPromptOutput()">Calcular Raio Prompt e mostrar no Output</button>
+    <button onclick="calcularRaioInputOutput()">Calcular Raio Input e mostrar no Output</button>
+    <br>
+
+    <output id="output"></output>
+
+    <script>
+        const raio = document.getElementById("raio")
+        const output = document.getElementById("output")
+
+        function calcularRaioPromptAlert(){
+            let raioValue = parseFloat(prompt("digite o raio "))
+            let msg = mostraAreaRaio(raioValue)
+            alert(msg)
+        }
+
+        function calcularRaioInputAlert(){
+            let raioValue = parseFloat(raio.value)
+            let msg = mostraAreaRaio(raioValue)
+            alert(msg)
+        }
+
+        function calcularRaioPromptOutput(){
+            let raioValue = parseFloat(prompt("digite o raio "))
+            let msg = mostraAreaRaio(raioValue)
+            output.innerHTML = `${msg}`
+        }
+
+        function calcularRaioInputOutput(){
+            let raioValue = parseFloat(raio.value)
+            let msg = mostraAreaRaio(raioValue)
+            output.innerHTML = `${msg}`
+        }
+        
+
+        function mostraAreaRaio(raio) {
+            let valorPI = Math.PI.toFixed(2)
+            let area = (valorPI * (raio**2)).toFixed(2)
+
+            return `A circunferência de raio ${raio} é ${area}`
+        }
+    </script>
+</body>
+</html>

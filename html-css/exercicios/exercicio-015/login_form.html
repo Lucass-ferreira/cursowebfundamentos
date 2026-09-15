@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        html {
+            background-color: #95a5a6;
+            font-family: Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            width: 350px;
+            padding: 1em;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            box-shadow: 3px 3px 10px #333;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+        }
+
+        legend {
+            padding: 1em;
+            text-align: center;
+            font-weight: bold;
+            color: #454e4f;
+            font-size: 1.2em;
+            margin-bottom: .5em;
+        }
+
+        label, input {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        label {
+            margin-bottom: .25em;
+        }
+
+        input {
+            padding: .75em;
+            border-radius: 5px;
+            margin-bottom: 1.5em;
+            border: 1px solid #bbb;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .input_btn {
+            width: fit-content;
+            padding: .75em 2.5 em;
+            margin-left: auto;
+            background-color: blue;
+            color: white;
+        }
+
+        .input_btn:hover {
+            background-color: #454e4f;
+            color: white;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+
+    <form action="#" method="get">
+        <fieldset>
+            <legend>Entre com seus dados de acesso</legend>
+
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" required autofocus>
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" required>
+
+            <input class="input_btn" type="submit" value="Entrar">
+        </fieldset>
+    </form>
+</body>
+</html>

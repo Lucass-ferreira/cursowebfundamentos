@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando</title>
+</head>
+<body>
+    <h1>Array</h1>
+
+    <script>
+        const numeros = [3, 5, 9, 8, 7, 4, 33, 64, 1]
+        let soma = 0
+
+        for(let ind = 0; ind < numeros.length; ind++) {
+            let numero = numeros[ind]
+
+            if(typeof numero === "number"){
+                if(numero % 2 !== 0){
+                    soma += numero
+                }
+            }
+        }
+        alert("a soma de todo os numero é " + soma)
+
+    </script>
+</body>
+</html>

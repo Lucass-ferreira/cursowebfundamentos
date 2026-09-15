@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip path</title>
+
+    <style>
+        body {
+            background-color: #ad3f29;
+            font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        h1 {
+            font-weight: lighter;
+            font-size: 3.5rem;
+            color: white;
+            text-align: center;
+        }
+
+        /* .card-container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        } */
+
+        .card-title {
+            margin: 0;
+            padding-top: 0;
+            font-weight: lighter;
+        }
+
+        .card p {
+            margin-bottom: 0;
+        }
+        
+
+        .card {
+            width: 300px;
+            background-color: white;
+            box-sizing: border-box;
+            padding: 2.5rem 3rem;
+            position: relative;
+        }
+
+        .card::before {
+            content: "";
+            display: block;
+            width: 34px;
+            height: 34px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .exemplo {
+            width: 0;
+            height: 0;
+            /* background-color: yellow; */
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-right: 15px solid black;
+            border-left: 15px solid transparent;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .clip-path > div {
+            width: 300px;
+            height: 300px;
+            margin: 30px;
+            background-image: repeating-linear-gradient(45deg, yellow 10%, orange 20%);
+        }
+
+        #d1 {
+            clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+        }
+
+        #d2 {
+            clip-path: circle(50% at center);
+        }
+
+        #d3 {
+            clip-path: ellipse(50% 20px at center);
+        }
+
+        #d4 {
+            clip-path: inset(20px 30px 40px 50px);
+        }
+
+        #d5 {
+            clip-path: inset(30px round 50px);
+        }
+
+        #d6 {
+            clip-path: circle(50% at center 25%);
+        }
+
+    </style>
+
+</head>
+<body>
+    <section class="card-container">
+    
+        <div class="card">
+            <h2 class="card-title">Lorem ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga provident laudantium nihil earum delectus, odio maxime excepturi! Nulla.</p>
+        </div>
+
+        <div class="exemplo"></div>
+
+        <section class="clip-path">
+            <div id="d1"></div>
+            <div id="d2"></div>
+            <div id="d3"></div>
+            <div id="d4"></div>
+            <div id="d5"></div>
+            <div id="d6"></div>
+        </section>
+    </section>
+</body>
+</html>

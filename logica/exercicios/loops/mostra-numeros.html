@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostra Numeros</title>
+</head>
+<body>
+    <h1>Mostra Numeros</h1>
+
+    <script>
+        for(let cont = 0; cont <= 100; cont++) {
+            if(cont % 10 === 0) {
+                continue
+            }
+            document.write(cont + "<br>")
+            let sorteio = parseInt(Math.random() * 100) + 1
+            if(cont % sorteio === 0){
+                break
+            }
+            
+        }
+    </script>
+</body>
+</html>

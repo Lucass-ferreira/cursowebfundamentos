@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+:root {
+  --cor01: #3a68b7;
+  --roboto: "roboto";
+}
+
+body {
+  background-color: var(--cor01);
+  font-family: var(--roboto), sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.form__content {
+  background-color: white;
+  width: 31.25em;
+  padding: 1em;
+  border-left: 10px solid #06214fef;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.legend__text{
+  padding: .6em 0 0 0;
+  font-size: 2em;
+  font-weight: 300;
+  color: var(--cor01);
+}
+
+.fieldset__content{
+  border: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3em;
+  gap: 7px;
+  font-weight: 300;
+}
+
+.items__label {
+  margin-top: .75em;
+  text-transform: uppercase;
+}
+
+.items__input {
+  padding: .5em 0;
+  border: 2px solid transparent;
+  border-bottom-color:var(--cor01);
+  font-size: 1em;
+}
+
+.items__input:focus {
+  outline-color: var(--cor01);
+  padding: .5em .5em;
+  transition-property: padding;
+  transition-duration: .4s;
+}
+
+.div__content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: .75em;
+}
+
+.div__btn {
+  background-color: var(--cor01);
+  color: white;
+  font-size: .9em;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  padding: .5em 1em;
+}
+
+.div__text {
+  font-size: .75em;
+  color: rgba(0, 0, 0, 0.75);
+}
+.div__link{
+  margin-right: auto;
+  padding: 0 .75em;
+}
+
+.div__link a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.div__text a {
+  font-weight: 400;
+}

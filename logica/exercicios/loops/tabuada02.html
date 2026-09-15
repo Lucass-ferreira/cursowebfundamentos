@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>loops - tabuada</h1>
+
+    <script>
+        let num = parseInt(prompt("digite um numero"))
+
+        if (!isNaN(num)) {
+            for(let ind = 0; ind <= 1000; ind++) {
+                document.write( num + " x " + ind + " = " + (num * ind) + "<br>")
+            }
+            document.write("Saiu do Jogo")
+        } else {
+            alert("digite apenas numeros")
+        }
+
+        
+
+    </script>
+</body>
+</html>

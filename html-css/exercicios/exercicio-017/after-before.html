@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>after before</title>
+    <style>
+        p::before {
+            content: "ANTES ";
+        }
+
+        p::after {
+            content: " DEPOIS";
+        }
+
+        div {
+            border: 3px solid red;
+            padding: 1em;
+            position: relative;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        div::after {
+            content: "";
+            width: 1em;
+            height: 1em;
+            background-color: red;
+            display: block;
+            position: absolute;
+
+            right: 0;
+            bottom: 0;
+        }
+
+        div::before {
+            content: url(imagens/dummy_64x64_ffffff_0000ff.png);
+            float: left;
+            margin-right: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ratione amet commodi maxime! Ea laborum modi, sint commodi totam quasi odio, quidem quis iste doloribus ab perspiciatis laudantium quia quos.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomes</title>
+</head>
+<body>
+    <h1>Nomes</h1>
+
+    <script>
+        let nome = prompt("digite um nome")
+        let nomes = ["João", "Maria", "Lucas", "Mara", "josé"] //sintaxe literal
+        // let nomes = new Array("João", "Maria", "Lucas", "Mara") // sintaxe função construtora
+        nomes[nomes.length] = nome
+
+        for(let ind = 0; ind < nomes.length; ind++){
+            document.write("Nome: " + nomes[ind] + "<br>")
+        }
+        document.write("Ao todo temos: " + nomes.length + " nomes")
+        </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-its</title>
+
+    <style>
+        body {
+            background-color: #ad3f29;
+            font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        h1 {
+            font-weight: lighter;
+            font-size: 3.5rem;
+            color: white;
+            text-align: center;
+        }
+
+        .card-container {
+            /* flex-basis: clamp(300px, calc(33%-15px), 400px); */
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .card-title {
+            margin: 0;
+            padding-top: 0;
+            font-weight: lighter;
+        }
+
+        .card p {
+            margin-bottom: 0;
+        }
+        
+        /* .card-01 {
+            background-image: linear-gradient(135deg, transparent 25px, white 25px);
+            width: 300px;
+            box-sizing: border-box;
+            padding: 2.5rem 3rem;
+            width: 100%;
+            filter: drop-shadow(0px 0px 5px #0006);
+        } */
+
+        
+        /* .card-02 {
+            background-image: 
+                linear-gradient(135deg, transparent 25px, #b5b4b4 25px),
+                linear-gradient(135deg, transparent 25px, white 25px);
+                background-size: 34px 34px, 100%;
+                background-repeat: no-repeat;
+            width: 300px;
+            box-sizing: border-box;
+            padding: 2.5rem 3rem;
+            width: 100%;
+            filter: drop-shadow(0px 0px 5px #0006);
+        } */
+
+        .card {
+            flex-basis: clamp( 300px, calc(33% - 15px), 400px);
+            flex-grow: 1;
+            background-image: linear-gradient(135deg, transparent 25px, white 25px);
+            box-sizing: border-box;
+            padding: 2.5rem 3rem;
+            filter: drop-shadow(0px 0px 5px #0006);
+            position: relative;
+        }
+
+        .card::before {
+            content: "";
+            display: block;
+            width: 34px;
+            height: 34px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, .3));
+            background-image: linear-gradient(135deg, transparent 25px, #b5b4b4 25px);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Post-its</h1>
+
+    <section class="card-container">
+    
+            <div class="card">
+                <h2 class="card-title">Lorem ipsum dolor.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga provident laudantium nihil earum delectus, odio maxime excepturi! Nulla.</p>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Lorem ipsum dolor.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga provident laudantium nihil earum delectus, odio maxime excepturi! Nulla.</p>
+            </div>
+            
+            <div class="card">
+                <h2 class="card-title">Lorem ipsum dolor.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga provident laudantium nihil earum delectus, odio maxime excepturi! Nulla.</p>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">Lorem ipsum dolor.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga provident laudantium nihil earum delectus, odio maxime excepturi! Nulla.</p>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">Lorem ipsum dolor.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga provident laudantium nihil earum delectus, odio maxime excepturi! Nulla.</p>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">Lorem ipsum dolor.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga provident laudantium nihil earum delectus, odio maxime excepturi! Nulla.</p>
+            </div>
+    
+            <div class="card">
+                <h2 class="card-title">Lorem ipsum dolor.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga provident laudantium nihil earum delectus, odio maxime excepturi! Nulla.</p>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">Lorem ipsum dolor.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga provident laudantium nihil earum delectus, odio maxime excepturi! Nulla.</p>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">Lorem ipsum dolor.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga provident laudantium nihil earum delectus, odio maxime excepturi! Nulla.</p>
+            </div>
+    </section>
+
+</body>
+</html>

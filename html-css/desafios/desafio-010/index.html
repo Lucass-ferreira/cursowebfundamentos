@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <form action="#" method="post">
+        <fieldset class="form__content">
+            <legend>Formulário de contato</legend>
+
+            <label for="nome">Seu Nome</label>
+            <input class="items__form" type="text" id="nome" required placeholder="Digite seu nome completo" minlength="10">
+
+            <label for="email">Email</label>
+            <input class="items__form" type="email" name="email" id="email" required placeholder="Digite um email válido">
+
+            <label for="assunto">Assunto</label>
+            <input class="assunto" type="text" name="assunto" id="assunto">
+
+            <label for="msg">Mensagem</label>
+            <textarea class="items__form msg" name="mensagem" id="msg" cols="30" rows="7" required minlength="20"></textarea>
+
+            <input class="input__btn" type="submit" value="Enviar">
+        </fieldset>
+    </form>
+
+</body>
+</html>
